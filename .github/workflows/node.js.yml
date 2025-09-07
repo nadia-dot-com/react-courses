@@ -2,7 +2,7 @@ name: Redeploy on push to main
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 jobs:
   build:
