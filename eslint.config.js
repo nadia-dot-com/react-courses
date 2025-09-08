@@ -12,6 +12,9 @@ export default tseslint.config([
   globalIgnores(['dist']),
   {
     files: ['**/*.{ts,tsx}'],
+     plugins: {
+      'react-hooks': reactHooks,
+    },
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
@@ -22,5 +25,14 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    "rules": {
+      "@typescript-eslint/no-unused-vars": "warn",
+      "react-refresh/only-export-components": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "storybook/no-renderer-packages": "off",
+      "@typescript-eslint/ban-ts-comment": "warn",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
 ], storybook.configs["flat/recommended"]);
